@@ -49,10 +49,10 @@
             <div class="col-5">
                 <label for="carcompanyname">Choose Car Company : </label>
                 <select class="form-select" name="car_company_name" id="carcompanyname">
-                    <option value="CAR_01" id="CAR_01">볼보</option>
-                    <option value="CAR_02" id="CAR_02" selected>현대</option>
-                    <option value="CAR_03" id="CAR_03">Audi</option>
-                    <option value="CAR_04" id="CAR_04">포르쉐</option>
+                    <option value="볼보" id="CAR_01">볼보</option>
+                    <option value="현대" id="CAR_02" selected>현대</option>
+                    <option value="Audi" id="CAR_03">Audi</option>
+                    <option value="포르쉐" id="CAR_04">포르쉐</option>
                 </select>
             </div>
         </div>
@@ -100,19 +100,10 @@
     })
     // option : choose car company
     let car_change = document.querySelector("#carcompanyname");
-    let car_01 = document.querySelector("#CAR_01")
-    let car_02 = document.querySelector("#CAR_02")
-    let car_03 = document.querySelector("#CAR_03")
-    let car_04 = document.querySelector("#CAR_04")
-    car_01.addEventListener('click', (car01) => {
-        console.log('볼보가 선택되었습니다!');
+
+    car_change.addEventListener('change', (car) => {
+        console.log(`${car.target.value}`)
     })
     
-
-    // car_change.addEventListener('click' ,  (car_change) => {
-    //     if (car_01.addEventListener('click')
-    // }
-)
-
 </script>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>도로교통공단_자전거사고다발지역정보서비스</title>
+</head>
+<body>
+    <h3 id="bicycle_table_id">도로교통공단_자전거사고다발지역정보</h3>
+    <button id="bicycle_table_button">표를 보고 싶으면 누르시오</button>
+    <div>
+        <table border="1">
+            <thead>
+                <th>일련변호</th>
+                <td value="spot_nm" >상세 위치</td>
+                <td value="occrrnc_cnt" >발생건수</td>
+                <td value="caslt_cnt" >사상자 수</td>
+                <td  value="dth_dnv_cnt">사망자 수</td>
+                <td value="se_dnv_cnt">중상자 수</td>
+                <td value="sl_dnv_cnt">경상자 수</td>
+                <td value="wnd_dnv_cnt">부상신고자수</td>
+                <td value="lo_crd">다발지역 중심점의 경도</td>
+                <td value="la_crd">다발지역 중심점의 위도</td>
+            </thead>
+            <tbody id="bicycle_array_id">
+
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./frequentzoneBicycle.js"></script>
+</html>
