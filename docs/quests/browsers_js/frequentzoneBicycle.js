@@ -26,3 +26,25 @@ bicycle_table_button.addEventListener('click', async(event) => {
     }
 });
 
+// 필요한 변수들 집어넣기
+
+let currentPage = 1 // 현재 페이지 ---> 변화하는 값
+let totalCount = data_result['totalCount'] // 전체 개수
+const pageCount = 5 // 한번에 보여지는 페이지 개수
+const limit = 10 // 한번에 보여지는 데이터의 개수
+
+let totalPage = Math.ceil(totalCount / limit) // 전체 페이지
+let pageGroup = currentPage / pageCount // 현재 그룹
+let firstpage = (pageGroup-1) +1
+let lastpage = pageGroup * pageCount
+
+const numberButtonWrapper = document.querySelector(".number-button-wrapper");
+const setpageButtons = () => {
+    numberButtonWrapper.innerHTML = '';
+    for (let i=1; 1 <= totalPage; i++) {
+        numberButtonWrapper.innerHTML += `<span class="number-button>${i}</span>`;
+    }
+};
+
+setpageButtons()
+
