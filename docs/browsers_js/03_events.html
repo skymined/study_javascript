@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div id="event_click">
+        event_click
+    </div>
+    <!-- event_click 발생 시 내용 채우기 -->
+    <div id="other_tag">
+
+    </div>
+    <div>
+        event_keydown : <input type="text" id="event_keydown">
+    </div>
+</body>
+<script>
+    // div에 click event
+    event_click = document.querySelector("#event_click")
+    event_click.addEventListener('click', (event) => {
+        console.log("event click!!");
+        // event 발생 시 특정 tag를 넣어주는 역할
+        let other_tag = document.querySelector("#other_tag");
+        messages = `<h3>event 발생 시 이곳에 뿅</h3>`;
+        other_tag.innerHTML = messages
+    })
+
+    // event keydown
+    // event 대상 tag 선택 with id
+    event_keydown = document.querySelector("#event_keydown")
+    // event 기다리게 추가
+    event_keydown.addEventListener('keydown', (p) => {
+        console.log(`now key down code : ${p.code}`);
+        
+        if (p.code == 'Enter'){ // keydown 시 넘어온 event에서 코드 확인
+            console.log(`key down : ${p.code}`);
+        }}
+    );
+</script>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customer CSS commons.css -->
+    <link rel="stylesheet" href="../css/commons.css">
+</head>
+<body>
+    <nav>nav</nav>
+    <main>
+        <!-- apply form-control with row and col -->
+        <div>apply form-control with row and col</div>
+        <div class="row">
+            <div class="col-3">
+                <input type="text" class="form-control-plaintext" id="email" placeholder="Email : " name="email">
+            </div>
+            <div class="col-6">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+        </div>
+        <!-- apply form-control -->
+        <div>apply form-control</div>
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        <hr>
+        <!-- select menu -->
+        <div>
+            <label for="carcompanyname">Choose Car Company : </label>
+            <select class="form-select" name="car_company_name" id="carcompanyname">
+                <option value="CAR_01">볼보</option>
+                <option value="CAR_02" selected>현대</option>
+                <option value="CAR_03">Audi</option>
+                <option value="CAR_04">포르쉐</option>
+            </select>
+        </div>
+        <!-- apply form-control with row and col -->
+        <div>apply form-control with row and col</div>
+        <div class="row">
+            <div class="col-3">
+                <input type="text" class="form-control-plaintext" id="email" placeholder="Email : " name="email">
+            </div>
+            <div class="col-4">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="col-5">
+                <label for="carcompanyname">Choose Car Company : </label>
+                <select class="form-select" name="car_company_name" id="carcompanyname">
+                    <option value="CAR_01" id="CAR_01">볼보</option>
+                    <option value="CAR_02" id="CAR_02" selected>현대</option>
+                    <option value="CAR_03" id="CAR_03">Audi</option>
+                    <option value="CAR_04" id="CAR_04">포르쉐</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div>
+                연구소 이름 : <input type="text" name="lab_name" value="youjulab" id="">
+            </div>
+            <div>
+                <div>- 희망 사항 선택 -</div>
+                <div class="form-check">
+                    <label class="form-check-label" for="hopedoglang">강아지 말 희망</label>
+                    <input class="form-check-input" type="radio" name="hope_lang" value="dog_lang" id="hopedoglang">
+                </div>
+            </div>
+            <div>
+                <div class="form-check" id="cat_lang">
+                    <label class="form-check-label" for="hopecatlang">고양이 말 희망</label>
+                    <input class="form-check-input" type="radio" name="hope_lang" value="cat_lang" id="hopecatlang">
+                </div>
+            </div>
+            <div>
+                <button type="submit" id="tag_enable">Tag enable</button>
+                <button type="reset" id="tag_disable">Tag disable</button>
+            </div>
+        </div>
+    </main>
+    <footer>footer</footer>
+    <form action="../index.html">
+        <button type="submit">index.html로 이동</button:sumbit>
+    </form>
+</body>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 고양이 말 희망을 없애고 생기게 하자!
+    let tag_enable = document.querySelector("#tag_enable");
+    let tag_diable = document.querySelector("#tag_disable");
+    let cat_lang_button = document.querySelector("#cat_lang");
+    tag_diable.addEventListener('click', (event) => {
+        cat_lang_button.innerHTML = ''
+    })
+    tag_enable.addEventListener('click', (enable_event) => {
+        cat_lang_button.innerHTML = '<label class="form-check-label" for="hopecatlang">고양이 말 희망</label><input class="form-check-input" type="radio" name="hope_lang" value="cat_lang" id="hopecatlang">' //다시 나오게 어캐함
+    })
+    // option : choose car company
+    let car_change = document.querySelector("#carcompanyname");
+    let car_01 = document.querySelector("#CAR_01")
+    let car_02 = document.querySelector("#CAR_02")
+    let car_03 = document.querySelector("#CAR_03")
+    let car_04 = document.querySelector("#CAR_04")
+    car_01.addEventListener('click', (car01) => {
+        console.log('볼보가 선택되었습니다!');
+    })
+    
+
+    // car_change.addEventListener('click' ,  (car_change) => {
+    //     if (car_01.addEventListener('click')
+    // }
+)
+
+</script>
+</html>
