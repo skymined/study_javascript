@@ -1,11 +1,11 @@
 
 
-//  데이터 가지고 오기
+//  데이터 가지고 오기 
 
 let bicycle_table_button = document.querySelector("#bicycle_table_button")
 bicycle_table_button.addEventListener('click', async(event) => {
 
-    let url = 'https://apis.data.go.kr/B552061/frequentzoneBicycle/getRestFrequentzoneBicycle?serviceKey=Gc7paAk%2Bpu9XSVXtB0YmE6%2FxA9zA4D8Q%2BfrMBjne9OMNaQdfGSppOtS54DkAhAfYt6Lvx8NUr8ct46cuTNMwtg%3D%3D&searchYearCd=2021&siDo=11&guGun=110&type=json&numOfRows=10&pageNo=1'
+    let url = 'https://apis.data.go.kr/B552061/frequentzoneBicycle/getRestFrequentzoneBicycle?serviceKey=Gc7paAk%2Bpu9XSVXtB0YmE6%2FxA9zA4D8Q%2BfrMBjne9OMNaQdfGSppOtS54DkAhAfYt6Lvx8NUr8ct46cuTNMwtg%3D%3D&searchYearCd=2021&siDo=&guGun=&type=json&numOfRows=10&pageNo=1'
     let options = {};
     
     try {
@@ -25,3 +25,4 @@ bicycle_table_button.addEventListener('click', async(event) => {
         console.log(`${error.message}`)
     }
 });
+
